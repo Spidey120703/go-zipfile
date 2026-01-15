@@ -2,12 +2,10 @@ package main
 
 import (
 	"archive/zipfile"
-	"bytes"
 	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
-	"reflect"
 	"strings"
 )
 
@@ -52,20 +50,4 @@ func main() {
 	if err = zip.Marshal(f); err != nil {
 		panic(err)
 	}
-}
-
-func main1() {
-	var a any = [4]byte{'a', 'b', 'c', 'd'}
-	var b bytes.Buffer
-	t := reflect.TypeOf(a)
-	v := reflect.ValueOf(a)
-	switch t.Kind() {
-	case reflect.Array:
-	case reflect.Slice:
-		if t.Elem().Kind() == reflect.Uint8 {
-			b.Write(v.Bytes())
-		}
-	default:
-	}
-	println(b.String())
 }
