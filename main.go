@@ -1,9 +1,9 @@
 package main
 
 import (
-	"archive/zipfile"
 	"flag"
 	"fmt"
+	"go-zipfile/zipfile"
 	"os"
 	"path/filepath"
 	"strings"

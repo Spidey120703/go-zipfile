@@ -1,7 +1,7 @@
 package zipfile
 
 import (
-	"archive/zipfile/dos"
+	"go-zipfile/zipfile/dos"
 )
 
 type Signature [4]byte

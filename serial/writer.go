@@ -90,7 +90,7 @@ func (m *marshaller) marshal(v any) (err error) {
 		}
 		return m.marshal(value.Elem())
 	case reflect.Slice:
-		if varType.Elem().Kind() == reflect.Uint8 && value.CanAddr() {
+		if varType.Elem().Kind() == reflect.Uint8 {
 			// if value is bytes buffer, write it into file directly
 			_, err = m.w.Write(value.Bytes())
 			return

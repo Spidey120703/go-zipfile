@@ -1,4 +1,4 @@
-module archive
+module go-zipfile
 
 go 1.25
 

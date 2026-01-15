@@ -1,12 +1,12 @@
 package zipfile
 
 import (
-	"archive/crc"
-	"archive/serial"
-	"archive/zipfile/dos"
 	"bytes"
 	"compress/flate"
 	"errors"
+	"go-zipfile/crc"
+	"go-zipfile/serial"
+	"go-zipfile/zipfile/dos"
 	"os"
 	"strings"
 	"time"
